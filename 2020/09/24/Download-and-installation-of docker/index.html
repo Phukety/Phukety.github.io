@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+    <title>Docker的下载与安装 | Phukety的个人博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    
+
+    
+
+    
+
+    
+
+    
+<link rel="stylesheet" href="../../../../dist/build.css?v=1.7.2.css">
+
+
+    <script>
+        window.aomori = {
+            
+        }
+        window.aomori_logo_typed_animated = true
+        window.aomori_search_algolia = false
+    </script>
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+
+    <div class="container">
+    <header class="header">
+        <div class="header-type">
+            
+            <div class="header-type-avatar avatar avatar-sm">
+                <img src="/images/avatar.jpg" alt="yuanbw">
+            </div>
+            
+            <div class="header-type-inner">
+                
+                    <div id="typed-strings" style="display:none">
+                        <p>Phukety的个人博客</p>
+                    </div>
+                    <a class="header-type-title" id="typed" href="/"></a>
+                
+    
+                
+            </div>
+        </div>
+        <div class="header-menu">
+            <div class="header-menu-inner">
+                
+                <a href="../../../../index.html">Home</a>
+                
+            </div>
+            <div class="header-menu-social">
+                
+    <a class="social" target="_blank" href="https://github.com/Phukety">
+        <box-icon type='' name=''></box-icon>
+    </a>
+
+            </div>
+        </div>
+
+        <div class="header-menu-mobile">
+            <div class="header-menu-mobile-inner" id="mobile-menu-open">
+                <i class="icon icon-menu"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="header-menu-mobile-menu">
+        <div class="header-menu-mobile-menu-bg"></div>
+        <div class="header-menu-mobile-menu-wrap">
+            <div class="header-menu-mobile-menu-inner">
+                <div class="header-menu-mobile-menu-close" id="mobile-menu-close">
+                    <i class="icon icon-cross"></i>
+                </div>
+                <div class="header-menu-mobile-menu-list">
+                    
+                    <a href="../../../../index.html">Home</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <div class="container">
+        <div class="main">
+            <section class="inner">
+                <section class="inner-main">
+                    <div class="post">
+    <article id="post-ckk47eo4m00053wn9btug3ef9" class="article article-type-post" itemscope
+    itemprop="blogPost">
+
+    <div class="article-inner">
+
+        
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" href="" rel="gallery_ckk47eo4m00053wn9btug3ef9">
+        <img src="../../../../images/docker.jpg" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+
+        
+        <header class="article-header">
+            
+  
+    <h1 class="article-title" itemprop="name">
+      Docker的下载与安装
+    </h1>
+  
+
+        </header>
+        
+
+        <div class="article-more-info article-more-info-post hairline">
+
+            <div class="article-date">
+  <time datetime="2020-09-24T20:48:46.000Z" itemprop="datePublished">2020-09-24</time>
+</div>
+
+            
+            <div class="article-category">
+                <a class="article-category-link" href="../../../../categories/%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/">容器技术</a>
+            </div>
+            
+
+            
+            <div class="article-tag">
+                <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/docker/" rel="tag">docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/%E6%96%87%E7%AB%A0/" rel="tag">文章</a></li></ul>
+            </div>
+            
+
+            
+            <div class="article-busuanzi">
+                有 <span id="busuanzi_value_page_pv">N</span> 人看过
+            </div>
+            
+        </div>
+
+        <div class="article-entry post-inner-html hairline" itemprop="articleBody">
+            <h4 id="本文主要介绍docker的下载与安装"><a href="#本文主要介绍docker的下载与安装" class="headerlink" title="本文主要介绍docker的下载与安装"></a>本文主要介绍docker的下载与安装</h4><a id="more"></a>
+
+<ol>
+<li><h3 id="若存在旧版本，则先卸载"><a href="#若存在旧版本，则先卸载" class="headerlink" title="若存在旧版本，则先卸载"></a>若存在旧版本，则先卸载</h3></li>
+</ol>
+<pre><code>sudo apt-get remove docker docker-engine docker-ce docker.io docker-ce-cli</code></pre>
+<ol start="2">
+<li><h3 id="更新apt包"><a href="#更新apt包" class="headerlink" title="更新apt包"></a>更新apt包</h3></li>
+</ol>
+<pre><code>sudo apt-get update</code></pre>
+<ol start="3">
+<li><h3 id="使用HTTPS使用存储库"><a href="#使用HTTPS使用存储库" class="headerlink" title="使用HTTPS使用存储库"></a>使用HTTPS使用存储库</h3></li>
+</ol>
+<pre><code>sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common</code></pre>
+<ol start="4">
+<li><h3 id="添加Docker官方GPS密钥"><a href="#添加Docker官方GPS密钥" class="headerlink" title="添加Docker官方GPS密钥"></a>添加Docker官方GPS密钥</h3></li>
+</ol>
+<pre><code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</code></pre>
+<ol start="5">
+<li><h3 id="设置stable存储库"><a href="#设置stable存储库" class="headerlink" title="设置stable存储库"></a>设置stable存储库</h3></li>
+</ol>
+<pre><code>sudo add-apt-repository &quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable&quot;</code></pre>
+<ol start="6">
+<li><h3 id="再次更新apt索引"><a href="#再次更新apt索引" class="headerlink" title="再次更新apt索引"></a>再次更新apt索引</h3></li>
+</ol>
+<pre><code>sudo apt-get update</code></pre>
+<ol start="7">
+<li><h3 id="安装最新的Docker-CE"><a href="#安装最新的Docker-CE" class="headerlink" title="安装最新的Docker CE"></a>安装最新的Docker CE</h3></li>
+</ol>
+<pre><code>sudo apt-get install -y docker-ce</code></pre>
+<ol start="8">
+<li><h3 id="安装特定版本Docker-CE"><a href="#安装特定版本Docker-CE" class="headerlink" title="安装特定版本Docker CE"></a>安装特定版本Docker CE</h3></li>
+</ol>
+<pre><code>apt-cache madison docker-ce</code></pre>
+<h4 id="列出可用的版本"><a href="#列出可用的版本" class="headerlink" title="　列出可用的版本"></a>　列出可用的版本</h4><p><img src="p1.jpg"></p>
+<ul>
+<li>第二列：版本字符串</li>
+<li>第三列：存储库名称</li>
+</ul>
+<h4 id="选择指定版本"><a href="#选择指定版本" class="headerlink" title="　选择指定版本"></a>　选择指定版本</h4><pre><code>sudo apt-get install docker-ce=&lt;VERSION&gt;</code></pre>
+<ol start="9">
+<li><h3 id="验证是否安装成功"><a href="#验证是否安装成功" class="headerlink" title="验证是否安装成功"></a>验证是否安装成功</h3></li>
+</ol>
+<h4 id="查看docker版本"><a href="#查看docker版本" class="headerlink" title="　查看docker版本"></a>　查看docker版本</h4><pre><code>docker -v</code></pre>
+<p><img src="p2.jpg"></p>
+<h4 id="则docker安装成功"><a href="#则docker安装成功" class="headerlink" title="　则docker安装成功"></a>　则docker安装成功</h4><ol start="10">
+<li><h3 id="启动docker的hello-world容器"><a href="#启动docker的hello-world容器" class="headerlink" title="启动docker的hello world容器"></a>启动docker的hello world容器</h3></li>
+</ol>
+<pre><code>docker run hello-world</code></pre>
+<p><img src="p3.jpg"></p>
+<h4 id="提示以上错误，是因为docker安装后，Docker的守护进程-Docker-daemon-会监听-Unix域套接字-var-run-docker-sock，容器中的进程可以通过它与Docker-daemon进行通信，但由于-var-run-docker-sock的用户组是docker，所以提示无权限，因此解决方法是将登录用户加入docker用户组或者直接使用sudo"><a href="#提示以上错误，是因为docker安装后，Docker的守护进程-Docker-daemon-会监听-Unix域套接字-var-run-docker-sock，容器中的进程可以通过它与Docker-daemon进行通信，但由于-var-run-docker-sock的用户组是docker，所以提示无权限，因此解决方法是将登录用户加入docker用户组或者直接使用sudo" class="headerlink" title="　提示以上错误，是因为docker安装后，Docker的守护进程(Docker daemon) 会监听 Unix域套接字/var/run/docker.sock，容器中的进程可以通过它与Docker daemon进行通信，但由于/var/run/docker.sock的用户组是docker，所以提示无权限，因此解决方法是将登录用户加入docker用户组或者直接使用sudo"></a>　提示以上错误，是因为docker安装后，<strong>Docker的守护进程(Docker daemon)</strong> 会监听 <strong>Unix域套接字/var/run/docker.sock</strong>，容器中的进程可以通过它与Docker daemon进行通信，但由于/var/run/docker.sock的用户组是docker，所以提示无权限，因此解决方法是将登录用户加入docker用户组或者直接使用sudo</h4><ul>
+<li><h5 id="创建docker用户组（安装docker后会自动创建该用户组）"><a href="#创建docker用户组（安装docker后会自动创建该用户组）" class="headerlink" title="创建docker用户组（安装docker后会自动创建该用户组）"></a>创建docker用户组（安装docker后会自动创建该用户组）</h5><pre><code>sudo groupadd docker</code></pre>
+</li>
+<li><h5 id="添加用户至docker用户组"><a href="#添加用户至docker用户组" class="headerlink" title="添加用户至docker用户组"></a>添加用户至docker用户组</h5><pre><code>sudo gpasswd -a yuanbw docker</code></pre>
+</li>
+</ul>
+<h4 id="若出现，则启动成功"><a href="#若出现，则启动成功" class="headerlink" title="　若出现，则启动成功"></a>　若出现，则启动成功</h4><p><img src="p4.jpg"></p>
+
+        </div>
+
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+<nav class="article-nav">
+  
+    <a href="../../26/Basic-usage-of%20docker/" id="article-nav-newer" class="article-nav-link-wrap">
+      <div class="article-nav-caption">下一篇</div>
+      <div class="article-nav-title">
+        
+          Docker的基本用法
+        
+      </div>
+    </a>
+  
+  
+    <a href="../../22/Learning-route(continuous-%20update)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-caption">上一篇</div>
+      <div class="article-nav-title">学习路线（要点)——持续更新</div>
+    </a>
+  
+</nav>
+
+
+    <section class="share">
+        <div class="share-title">分享</div>
+        <a class="share-item" target="_blank"
+            href="https://twitter.com/share?text=Docker的下载与安装 - Phukety的个人博客&url=https://github.com/Phukety/Phukety.github.io/2020/09/24/Download-and-installation-of%20docker/">
+            <box-icon type='logo' name='twitter'></box-icon>
+        </a>
+        <a class="share-item" target="_blank"
+            href="https://www.facebook.com/sharer.php?title=Docker的下载与安装 - Phukety的个人博客&u=https://github.com/Phukety/Phukety.github.io/2020/09/24/Download-and-installation-of%20docker/">
+            <box-icon name='facebook-square' type='logo' ></box-icon>
+        </a>
+        <!-- <a class="share-item" target="_blank"
+            href="https://service.weibo.com/share/share.php?title=Docker的下载与安装 - Phukety的个人博客&url=https://github.com/Phukety/Phukety.github.io/2020/09/24/Download-and-installation-of%20docker/&pic=">
+            <div class="n-icon n-icon-weibo"></div>
+        </a> -->
+    </section>
+
+</article>
+
+
+
+
+
+
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+</div>
+                </section>
+            </section>
+
+             
+            <aside class="sidebar">
+            
+                
+
+
+<div class="widget" id="widget">
+    
+      
+  <div class="widget-wrap">
+    <div class="widget-inner">
+      <div class="toc post-toc-html"></div>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget-wrap widget-cate">
+    <div class="widget-title"><span>Categories</span></div>
+    <div class="widget-inner">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="../../../../categories/java%E5%9F%BA%E7%A1%80/">java基础</a></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/%E5%8A%A0%E5%AF%86%E4%BC%A0%E8%BE%93%E6%8A%80%E6%9C%AF/">加密传输技术</a></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></li><li class="category-list-item"><a class="category-list-link" href="../../../../categories/%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/">容器技术</a></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-tags">
+    <div class="widget-title"><span>Tags</span></div>
+    <div class="widget-inner">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/https/" rel="tag">https</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" rel="tag">大数据</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/%E6%96%87%E7%AB%A0/" rel="tag">文章</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/%E6%9E%B6%E6%9E%84/" rel="tag">架构</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/%E9%9B%86%E5%90%88/" rel="tag">集合</a></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-recent-posts">
+    <div class="widget-title"><span>Recent Posts</span></div>
+    <div class="widget-inner">
+      <ul>
+        
+          <li>
+            <a href="../../../../2021/01/11/The-Usage-Of-AtomicInteger/">AtomicInteger的使用与场景</a>
+          </li>
+        
+          <li>
+            <a href="../../../../2021/01/11/The-Usage-Of-UnmodifiableList/">Collections.unmodifiableList方法的使用与场景</a>
+          </li>
+        
+          <li>
+            <a href="../../../11/30/Hash-algorithm/">Hash算法及相关应用</a>
+          </li>
+        
+          <li>
+            <a href="../../../10/28/System-exit/">System.exit()</a>
+          </li>
+        
+          <li>
+            <a href="../../../10/28/Awk/">awk</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget-wrap widget-archive">
+    <div class="widget-title"><span>Archive</span></div>
+    <div class="widget-inner">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2021/01/">2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2020/11/">2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2020/10/">2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2020/09/">2020</a></li></ul>
+    </div>
+  </div>
+
+
+    
+</div>
+
+<div id="backtop"><i class="icon icon-arrow-up"></i></div>
+            </aside>
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="footer-wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#3c4859" fill-opacity="1" d="M0,160L60,181.3C120,203,240,245,360,240C480,235,600,181,720,186.7C840,192,960,256,1080,261.3C1200,267,1320,213,1380,186.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+    </div>
+
+    <div class="footer-wrap">
+        <div class="footer-inner"> 
+            Phukety的个人博客 &copy; 2013 - 2021<br>
+            Powered By Hexo · Theme By <a href="https://github.com/lh1me/hexo-theme-aomori" target="_blank">Aomori</a>
+        </div>
+    </div>
+
+</footer>
+
+
+
+
+<script src="../../../../dist/build.js?1.7.2.js"></script>
+
+
+<script src="../../../../dist/custom.js?1.7.2.js"></script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
